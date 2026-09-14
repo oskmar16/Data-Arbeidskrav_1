@@ -28,15 +28,9 @@ Tenk deg at en forsker finner en sammenheng mellom arbeidsledighet og en annen �
 
 ## Litteraturgjennomgang
 
-Smarte synspunkt om emnet fra andre.
+Muligheten til å kontrollere tidligere forskning er viktig i økonomifaget. @dewald1986b undersøkte om publiserte økonomiske analyser kunne gjentas, og viste at manglende informasjon om data og beregninger gjorde dette vanskelig. Selv når en analyse kan gjentas, må vi fortsatt vurdere hvordan studien ble gjennomført. @ioannidis2005b peker på at blant annet små studier og mange mulige analysevalg kan gjøre publiserte funn mindre pålitelige. @munafo2017 argumenterer derfor for bedre rutiner gjennom hele forskningsprosessen, fra planlegging til publisering.
 
-Bruk minst 20 siteringer. Minst 5 må være nye relevante artikler om emnet som du har funnet selv.
-
-Benytt begge siteringsmåter, dvs. «in-line» og på slutten av setningen. Prøv å variere siteringsteknikk for å få flyt i språket.
-
-Example:
-
-@gentleman2003 hevder at bla bla bla. Andre mener imidlertid bla bla [@goodman2016b; @ioannidis2005b].
+For at andre skal kunne følge en analyse, må forskeren dokumentere veien fra rådata til resultat. @sandve2013 anbefaler å ta vare på informasjon om hvordan resultater ble laget, unngå manuelle endringer i data og oppgi programvareversjoner. @wilson2017 beskriver enkle rutiner for å organisere data og kode, også for dem som ikke har mye erfaring med programmering. Git kan lagre tidligere versjoner av filene, slik at andre kan se hva som er endret underveis [@ram2013]. Dokumentasjonen må dessuten oppdateres når analysen endres; ellers kan beskrivelsen og den faktiske framgangsmåten bli forskjellige [@sandve2013].
 
 ## Diskusjon av forskningsspørsmålet (problemstillingen)
 
