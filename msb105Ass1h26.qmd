@@ -40,7 +40,8 @@ Noen problemer oppstår allerede før dataene analyseres. @munafo2017 foreslår 
 
 Bør reproduserbarhet være et krav? Jeg mener at forskere som hovedregel bør vise hvordan de kom fram til resultatene sine. Da kan andre kontrollere beregningene og lettere oppdage feil. Erfaringene fra forsøk på å gjenta publiserte økonomiske analyser viser hvorfor tilgang til datagrunnlag og framgangsmåte er viktig [@dewald1986b]. Samtidig må kravet ta hensyn til data som ikke kan deles fritt, for eksempel personopplysninger. I slike tilfeller bør forskeren fortsatt forklare metoden så godt som mulig.
 
-- Kan Quarto dokumenter hjelpe med å oppnå reproduserbarhet?
+Kan et Quarto-dokument hjelpe? Hvis jeg for eksempel undersøker arbeidsledighetstall for kommuner i Rogaland i R, kan jeg samle forklaring, kode, tabeller og figurer i samme qmd-dokument. En annen student kan da se hvilke variabler jeg brukte, hvordan jeg behandlet tallene, og hvordan jeg laget figuren. For at analysen skal kunne gjentas, må jeg også ta vare på dataene og oppgi hvilke programmer og pakker jeg brukte [@sandve2013]. En ryddig prosjektmappe gjør filene lettere å forstå [@wilson2017], mens GitHub kan vise hvordan dokumentet har endret seg over tid [@ram2013]. Dette viser hvordan jeg fikk resultatet, men beviser ikke at tolkningen min er riktig.
+
 - Hvilke problem gjenstår og hvordan kan disse løses?
 
 ## Konklusjon
