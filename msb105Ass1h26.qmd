@@ -16,13 +16,15 @@ format:
 # krever at tinytex er installert
 #  pdf:
 #    papersize: a4
-bibliography: reproducibility.bib
+bibliography:
+  - reproducibility.bib
+  - mine_artikler.bib
 abstract: "Et kort sammendrag, en til to avsnitt."
 ---
 
 ## Introduksjon
 
-Hva handler artikkelen om? Hva blir diskutert? Hvorfor er dette viktig?
+Tenk deg at en forsker finner en sammenheng mellom arbeidsledighet og en annen økonomisk variabel. For å vurdere funnet trenger vi å vite hvilke data forskeren brukte, hvordan de ble behandlet, og hvilke analyser som ble gjort. @goodman2016b skiller mellom å gjenta en analyse med de samme dataene og å undersøke om funnet holder i en ny studie. Forskjellen er viktig: Vi kan få nøyaktig det samme resultatet ved å kjøre forskerens kode på nytt, men resultatet kan likevel bygge på en svak metode [@peng2011]. Problemstillingen i denne teksten er derfor: **Er reproduserbarhet nok for å stole på forskning, og hvordan kan et Quarto-dokument hjelpe?**
 
 ## Litteraturgjennomgang
 
@@ -60,5 +62,3 @@ Noen kloke ord.
 
 - Hvordan er KI brukt
 - Husk invitasjon til chat
-
-[@broman2018a]
