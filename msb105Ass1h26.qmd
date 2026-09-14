@@ -46,7 +46,7 @@ Hvilke problemer gjenstår? Selv om jeg deler filene mine, kan det være uklart 
 
 ## Konklusjon
 
-Noen kloke ord.
+Reproduserbarhet bør være et grunnkrav fordi den gjør det mulig å undersøke veien fra data til konklusjon. Et Quarto-dokument og GitHub kan hjelpe oss å dokumentere og gjenta en analyse. For å stole på et forskningsfunn må vi likevel også vurdere metoden, analysevalgene og om resultatet holder når det undersøkes med nye data.
 
 ## Referanser
 
