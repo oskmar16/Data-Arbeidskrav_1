@@ -42,7 +42,7 @@ Bør reproduserbarhet være et krav? Jeg mener at forskere som hovedregel bør v
 
 Kan et Quarto-dokument hjelpe? Hvis jeg for eksempel undersøker arbeidsledighetstall for kommuner i Rogaland i R, kan jeg samle forklaring, kode, tabeller og figurer i samme qmd-dokument. En annen student kan da se hvilke variabler jeg brukte, hvordan jeg behandlet tallene, og hvordan jeg laget figuren. For at analysen skal kunne gjentas, må jeg også ta vare på dataene og oppgi hvilke programmer og pakker jeg brukte [@sandve2013]. En ryddig prosjektmappe gjør filene lettere å forstå [@wilson2017], mens GitHub kan vise hvordan dokumentet har endret seg over tid [@ram2013]. Dette viser hvordan jeg fikk resultatet, men beviser ikke at tolkningen min er riktig.
 
-- Hvilke problem gjenstår og hvordan kan disse løses?
+Hvilke problemer gjenstår? Selv om jeg deler filene mine, kan det være uklart hva en variabel betyr, eller koden kan slutte å virke når en pakke oppdateres. Tilgjengelige data er derfor ikke nødvendigvis data som andre enkelt kan bruke [@hardwicke2018]. Krav om deling må også følges opp i praksis [@stodden2018]. Hvis jeg finner en sammenheng i arbeidsledighetstallene for ett år, bør jeg i tillegg undersøke om den finnes i andre år eller kommuner. En slik ny test sier mer om hvor godt funnet holder enn å kjøre den samme analysen én gang til [@munafo2017].
 
 ## Konklusjon
 
