@@ -46,7 +46,9 @@ Hvilke problemer gjenstår? Selv om jeg deler filene mine, kan det være uklart 
 
 ## Konklusjon
 
-Reproduserbarhet bør være et grunnkrav fordi den gjør det mulig å undersøke veien fra data til konklusjon. Et Quarto-dokument og GitHub kan hjelpe oss å dokumentere og gjenta en analyse. For å stole på et forskningsfunn må vi likevel også vurdere metoden, analysevalgene og om resultatet holder når det undersøkes med nye data.
+Reproduserbarhet bør være et grunnkrav i forskning fordi den gjør det mulig å undersøke veien fra data til konklusjon. Når data, kode og analysevalg er godt dokumentert, kan andre kontrollere beregningene og lettere oppdage feil. Et Quarto-dokument og GitHub kan hjelpe med dette ved å samle arbeidet og vise hvordan det har utviklet seg.
+
+Samtidig er et resultat ikke automatisk pålitelig bare fordi analysen kan gjentas. Forskeren kan ha valgt en lite egnet metode, eller funnet kan være spesielt for dataene som ble brukt. For å stole mer på konklusjonen bør vi derfor også vurdere analysevalgene og undersøke om resultatet holder med nye data [@munafo2017].
 
 ## Referanser
 
