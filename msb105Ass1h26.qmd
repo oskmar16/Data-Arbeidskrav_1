@@ -32,6 +32,10 @@ Muligheten til å kontrollere tidligere forskning er viktig i økonomifaget. @de
 
 For at andre skal kunne følge en analyse, må forskeren dokumentere veien fra rådata til resultat. @sandve2013 anbefaler å ta vare på informasjon om hvordan resultater ble laget, unngå manuelle endringer i data og oppgi programvareversjoner. @wilson2017 beskriver enkle rutiner for å organisere data og kode, også for dem som ikke har mye erfaring med programmering. Git kan lagre tidligere versjoner av filene, slik at andre kan se hva som er endret underveis [@ram2013]. Dokumentasjonen må dessuten oppdateres når analysen endres; ellers kan beskrivelsen og den faktiske framgangsmåten bli forskjellige [@sandve2013].
 
+Det er heller ikke nok å legge ut en datafil dersom andre ikke forstår hvordan den skal brukes. @hardwicke2018 undersøkte artikler i tidsskriftet *Cognition* og skilte mellom om data var tilgjengelige, om de kunne brukes, og om analysene kunne gjentas. @stodden2018 undersøkte et tidsskrifts krav om å dele data og kode. Studien viser at et slikt krav ikke automatisk gjør alle analysene reproduserbare. Filene må inneholde tilstrekkelig informasjon til at andre faktisk kan arbeide videre med dem [@hardwicke2018].
+
+Noen problemer oppstår allerede før dataene analyseres. @munafo2017 foreslår blant annet tydeligere planlegging og rapportering for å gjøre forskning mer pålitelig. Hvis en forsker prøver mange ulike analyser og bare presenterer den som gir et interessant resultat, kan funnet virke sikrere enn det er. Dette er en av grunnene til at reproduserbar kode ikke alene kan gjøre en svak studie troverdig [@ioannidis2005b].
+
 ## Diskusjon av forskningsspørsmålet (problemstillingen)
 
 - Burde replikerbarhet være et krav eller er det å be om for mye?
