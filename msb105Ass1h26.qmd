@@ -38,7 +38,8 @@ Noen problemer oppstår allerede før dataene analyseres. @munafo2017 foreslår 
 
 ## Diskusjon av forskningsspørsmålet (problemstillingen)
 
-- Burde replikerbarhet være et krav eller er det å be om for mye?
+Bør reproduserbarhet være et krav? Jeg mener at forskere som hovedregel bør vise hvordan de kom fram til resultatene sine. Da kan andre kontrollere beregningene og lettere oppdage feil. Erfaringene fra forsøk på å gjenta publiserte økonomiske analyser viser hvorfor tilgang til datagrunnlag og framgangsmåte er viktig [@dewald1986b]. Samtidig må kravet ta hensyn til data som ikke kan deles fritt, for eksempel personopplysninger. I slike tilfeller bør forskeren fortsatt forklare metoden så godt som mulig.
+
 - Kan Quarto dokumenter hjelpe med å oppnå reproduserbarhet?
 - Hvilke problem gjenstår og hvordan kan disse løses?
 
