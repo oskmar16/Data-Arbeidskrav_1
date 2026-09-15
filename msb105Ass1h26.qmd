@@ -57,10 +57,9 @@ Samtidig er et resultat ikke automatisk pålitelig bare fordi analysen kan gjent
 
 ## Appendiks A
 
-- Versjon nummer og referanse til R pakken brukt i dokumentet
-- R versjon brukt, med referanse
+Dokumentet ble laget med R versjon 4.6.1 [@RCoreTeam2026]. Det er ikke brukt egne R-pakker til analyse i dokumentet.
 
 ## Appendiks B
 
-- Hvordan er KI brukt
-- Husk invitasjon til chat
+- ChatGPT er brukt til å få hjelp med struktur og tekstutkast, forbedre formuleringer og forstå bruk av Quarto, Zotero og Git. Forslagene er gjennomgått og tilpasset før bruk.
+- Lenke til ChattGPT samtalen: https://chatgpt.com/share/6aa91265-bc44-83eb-9ff0-5844df0e3054
