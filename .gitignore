@@ -51,3 +51,5 @@ rsconnect/
 # Quarto Render-filer
 msb105Ass1h26.html
 msb105Ass1h26_files/
+.quarto/
+msb105Ass1h26.pdf

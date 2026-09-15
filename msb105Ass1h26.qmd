@@ -25,25 +25,61 @@ abstract: |
 
 ## Introduksjon
 
-Tenk deg at en forsker finner en sammenheng mellom arbeidsledighet og en annen økonomisk variabel. For å vurdere funnet trenger vi å vite hvilke data forskeren brukte, hvordan de ble behandlet, og hvilke analyser som ble gjort. @goodman2016b skiller mellom å gjenta en analyse med de samme dataene og å undersøke om funnet holder i en ny studie. Forskjellen er viktig: Vi kan få nøyaktig det samme resultatet ved å kjøre forskerens kode på nytt, men resultatet kan likevel bygge på en svak metode [@peng2011]. Problemstillingen i denne teksten er derfor: **Er reproduserbarhet nok for å stole på forskning, og hvordan kan et Quarto-dokument hjelpe?**
+Tenk deg at en forsker finner en sammenheng mellom arbeidsledighet og en annen økonomisk variabel. For å vurdere funnet trenger vi å vite hvilke data som ble brukt, hvordan de ble behandlet, og hvilke analyser som ble gjennomført. Hvis denne informasjonen mangler, blir det vanskelig for andre å kontrollere resultatet.
+
+@goodman2016b skiller mellom å gjenta en analyse med de samme dataene og å undersøke om funnet holder i en ny studie. Forskjellen er viktig: Vi kan få nøyaktig samme resultat ved å kjøre forskerens kode på nytt, selv om analysen bygger på en svak metode [@peng2011]. Reproduserbarhet viser dermed at beregningene kan gjentas, men beviser ikke automatisk at konklusjonen er riktig.
+
+Et Quarto-dokument kan samle tekst, kode, tabeller, figurer og kildehenvisninger på ett sted, mens GitHub kan vise hvordan dokumentet har endret seg. Problemstillingen i denne teksten er derfor: **Er reproduserbarhet nok for å stole på forskning, og hvordan kan et Quarto-dokument hjelpe?**
+
+```{=typst}
+#v(0.7em)
+```
 
 ## Litteraturgjennomgang
 
-Muligheten til å kontrollere tidligere forskning er viktig i økonomifaget. @dewald1986b undersøkte om publiserte økonomiske analyser kunne gjentas, og viste at manglende informasjon om data og beregninger gjorde dette vanskelig. Selv når en analyse kan gjentas, må vi fortsatt vurdere hvordan studien ble gjennomført. @ioannidis2005b peker på at blant annet små studier og mange mulige analysevalg kan gjøre publiserte funn mindre pålitelige. @munafo2017 argumenterer derfor for bedre rutiner gjennom hele forskningsprosessen, fra planlegging til publisering.
+Muligheten til å kontrollere tidligere forskning har lenge vært en utfordring i økonomifaget. @dewald1986b undersøkte om publiserte økonomiske analyser kunne gjentas, og viste at manglende informasjon om data og beregninger gjorde dette vanskelig. Når datagrunnlaget eller framgangsmåten ikke er tilgjengelig, må leseren i stor grad stole på at forskeren har arbeidet korrekt. Det svekker muligheten til å kontrollere beregningene og undersøke om andre analysevalg ville gitt et annet resultat.
 
-For at andre skal kunne følge en analyse, må forskeren dokumentere veien fra rådata til resultat. @sandve2013 anbefaler å ta vare på informasjon om hvordan resultater ble laget, unngå manuelle endringer i data og oppgi programvareversjoner. @wilson2017 beskriver enkle rutiner for å organisere data og kode, også for dem som ikke har mye erfaring med programmering. Git kan lagre tidligere versjoner av filene, slik at andre kan se hva som er endret underveis [@ram2013]. Dokumentasjonen må dessuten oppdateres når analysen endres; ellers kan beskrivelsen og den faktiske framgangsmåten bli forskjellige [@sandve2013].
+Selv når en analyse kan gjentas, må vi fortsatt vurdere hvordan studien ble gjennomført. Det er mulig å dokumentere en analyse svært godt uten at selve forskningsdesignet er godt. @ioannidis2005b peker på at blant annet små studier og mange mulige analysevalg kan gjøre publiserte funn mindre pålitelige. Hvis en forsker prøver mange forskjellige modeller, variabler eller utvalg, øker muligheten for å finne et interessant resultat ved en tilfeldighet. Analysen kan fremdeles være reproduserbar dersom alle valgene er dokumentert, men dokumentasjonen gjør ikke nødvendigvis funnet mer troverdig.
 
-Det er heller ikke nok å legge ut en datafil dersom andre ikke forstår hvordan den skal brukes. @hardwicke2018 undersøkte artikler i tidsskriftet *Cognition* og skilte mellom om data var tilgjengelige, om de kunne brukes, og om analysene kunne gjentas. @stodden2018 undersøkte et tidsskrifts krav om å dele data og kode. Studien viser at et slikt krav ikke automatisk gjør alle analysene reproduserbare. Filene må inneholde tilstrekkelig informasjon til at andre faktisk kan arbeide videre med dem [@hardwicke2018].
+@munafo2017 argumenterer derfor for bedre rutiner gjennom hele forskningsprosessen, fra planlegging til publisering. Reproduserbarhet handler ikke bare om hva forskeren gjør etter at analysen er ferdig. Tydelig planlegging kan redusere risikoen for at metode og hypoteser blir tilpasset resultatene i ettertid. God rapportering gjør det samtidig lettere for andre å forstå hvilke valg som ble tatt før og under analysen. Dette viser at reproduserbarhet må ses som en del av en større forskningsprosess.
 
-Noen problemer oppstår allerede før dataene analyseres. @munafo2017 foreslår blant annet tydeligere planlegging og rapportering for å gjøre forskning mer pålitelig. Hvis en forsker prøver mange ulike analyser og bare presenterer den som gir et interessant resultat, kan funnet virke sikrere enn det er. Dette er en av grunnene til at reproduserbar kode ikke alene kan gjøre en svak studie troverdig [@ioannidis2005b].
+For at andre skal kunne følge en analyse, må forskeren dokumentere veien fra rådata til resultat. @sandve2013 anbefaler å ta vare på informasjon om hvordan resultatene ble laget, unngå manuelle endringer i data og oppgi hvilke programvareversjoner som ble brukt. Manuelle endringer kan være vanskelige å oppdage og gjenta. Dersom en forsker for eksempel endrer enkelte verdier direkte i et regneark uten å dokumentere det, vil ikke en annen person nødvendigvis klare å produsere det samme resultatet.
+
+@wilson2017 beskriver enkle rutiner for å organisere data og kode, også for personer som ikke har mye erfaring med programmering. Et prosjekt bør ha forståelige filnavn og en tydelig mappestruktur. Rådata bør også oppbevares uten manuelle endringer, mens behandling av data bør utføres med kode. Da blir det mulig å se hvilke handlinger som har ført fra de opprinnelige dataene til den ferdige analysen.
+
+Git kan lagre tidligere versjoner av filene, slik at andre kan se hva som er endret underveis [@ram2013]. Dette er nyttig fordi en analyse ofte utvikler seg gradvis. Kode blir rettet, teksten blir skrevet om, og nye valg blir tatt. Uten versjonskontroll kan det være vanskelig å finne tilbake til den versjonen som produserte et bestemt resultat. GitHub gjør det også mulig å dele prosjektet og samarbeide med andre. Dokumentasjonen må likevel oppdateres når analysen endres. Hvis ikke, kan beskrivelsen og den faktiske framgangsmåten bli forskjellige [@sandve2013].
+
+Det er heller ikke nok å legge ut en datafil dersom andre ikke forstår hvordan den skal brukes. @hardwicke2018 undersøkte artikler i tidsskriftet Cognition og skilte mellom om data var tilgjengelige, om de kunne brukes, og om analysene kunne gjentas. En fil kan altså være tilgjengelig uten å være særlig nyttig. Variabler kan være dårlig forklart, enkelte filer kan mangle, eller koden kan vise til mapper som bare finnes på forskerens egen datamaskin.
+
+@stodden2018 undersøkte et tidsskrifts krav om å dele data og kode. Studien viser at et slikt krav ikke automatisk gjør alle analysene reproduserbare. Det er ikke nok at tidsskriftet har en regel dersom filene som deles, er ufullstendige eller vanskelige å forstå. Filene må inneholde tilstrekkelig informasjon til at andre faktisk kan arbeide videre med dem [@hardwicke2018]. Det kan derfor være nødvendig at tidsskrifter kontrollerer om materialet fungerer før en artikkel publiseres.
+
+Noen problemer oppstår allerede før dataene analyseres. @munafo2017 foreslår blant annet tydeligere planlegging og rapportering for å gjøre forskning mer pålitelig. Hvis en forsker prøver mange ulike analyser og bare presenterer den som gir et interessant resultat, kan funnet virke sikrere enn det egentlig er. Leseren får da ikke vite hvor mange andre analyser som ble forsøkt. Dette er en av grunnene til at reproduserbar kode alene ikke kan gjøre en svak studie troverdig [@ioannidis2005b]. Reproduserbarhet bidrar først og fremst til åpenhet, mens kvaliteten på forskningen også avhenger av spørsmålene, dataene og metodene som brukes.
+
+```{=typst}
+#v(0.7em)
+```
 
 ## Diskusjon av forskningsspørsmålet
 
-**Bør reproduserbarhet være et krav?** Jeg mener at forskere som hovedregel bør vise hvordan de kom fram til resultatene sine. Da kan andre kontrollere beregningene og lettere oppdage feil. Erfaringene fra forsøk på å gjenta publiserte økonomiske analyser viser hvorfor tilgang til datagrunnlag og framgangsmåte er viktig [@dewald1986b]. Samtidig må kravet ta hensyn til data som ikke kan deles fritt, for eksempel personopplysninger. I slike tilfeller bør forskeren fortsatt forklare metoden så godt som mulig.
+**Bør reproduserbarhet være et krav?** Jeg mener at forskere som hovedregel bør vise hvordan de kom fram til resultatene sine. Når datagrunnlaget, koden og analysevalgene er tilgjengelige, kan andre kontrollere beregningene og lettere oppdage feil. Det kan også bli enklere å undersøke om andre metoder gir samme konklusjon. Erfaringene fra forsøk på å gjenta publiserte økonomiske analyser viser hvorfor tilgang til datagrunnlag og framgangsmåte er viktig [@dewald1986b].
 
-**Kan et Quarto-dokument hjelpe?** Hvis jeg for eksempel undersøker arbeidsledighetstall for kommuner i Rogaland i R, kan jeg samle forklaring, kode, tabeller og figurer i samme qmd-dokument. En annen student kan da se hvilke variabler jeg brukte, hvordan jeg behandlet tallene, og hvordan jeg laget figuren. For at analysen skal kunne gjentas, må jeg også ta vare på dataene og oppgi hvilke programmer og pakker jeg brukte [@sandve2013]. En ryddig prosjektmappe gjør filene lettere å forstå [@wilson2017], mens GitHub kan vise hvordan dokumentet har endret seg over tid [@ram2013]. Dette viser hvordan jeg fikk resultatet, men beviser ikke at tolkningen min er riktig.
+Reproduserbarhet kan også styrke tilliten til forskningen. Det betyr ikke at alle lesere må kontrollere hver beregning, men at muligheten finnes. Bare det at analyseprosessen er åpen, kan gjøre forskeren mer bevisst på egne valg. Samtidig må kravet ta hensyn til data som ikke kan deles fritt, for eksempel personopplysninger, bedriftsinformasjon eller andre sensitive opplysninger. I slike tilfeller bør forskeren fortsatt forklare datagrunnlaget og metoden så godt som mulig. Det kan også være aktuelt å gi tilgang til anonymiserte data eller la godkjente personer kontrollere materialet.
 
-**Hvilke problemer gjenstår?** Selv om jeg deler filene mine, kan det være uklart hva en variabel betyr, eller koden kan slutte å virke når en pakke oppdateres. Tilgjengelige data er derfor ikke nødvendigvis data som andre enkelt kan bruke [@hardwicke2018]. Krav om deling må også følges opp i praksis [@stodden2018]. Hvis jeg finner en sammenheng i arbeidsledighetstallene for ett år, bør jeg i tillegg undersøke om den finnes i andre år eller kommuner. En slik ny test sier mer om hvor godt funnet holder enn å kjøre den samme analysen én gang til [@munafo2017].
+**Kan et Quarto-dokument hjelpe?** Hvis jeg for eksempel undersøker arbeidsledighetstall for kommuner i Rogaland i R, kan jeg samle forklaring, kode, tabeller og figurer i det samme .qmd-dokumentet. En annen student kan da se hvilke variabler jeg brukte, hvordan jeg behandlet tallene, og hvordan jeg laget figuren. Hvis jeg senere endrer utvalget av kommuner eller tidsperioden, kan tabellene og figurene oppdateres ved å kjøre dokumentet på nytt.
+
+Dette reduserer behovet for å kopiere resultater manuelt fra R og inn i et annet dokument. Manuell kopiering kan føre til at gamle tabeller eller figurer blir stående etter at analysen er endret. Når kode og presentasjon av resultatene er samlet, blir forbindelsen mellom beregningene og den ferdige teksten tydeligere. For at analysen skal kunne gjentas, må jeg også ta vare på dataene og oppgi hvilke programmer og pakker jeg brukte [@sandve2013].
+
+En ryddig prosjektmappe gjør filene lettere å forstå [@wilson2017], mens GitHub kan vise hvordan dokumentet har endret seg over tid [@ram2013]. Hvis jeg gjør en feil, kan jeg gå tilbake til en tidligere versjon. Andre kan også se hvilke endringer som er gjort, og eventuelt foreslå forbedringer. Quarto og GitHub utfyller dermed hverandre: Quarto samler innholdet i analysen, mens GitHub tar vare på historikken. Verktøyene viser likevel først og fremst hvordan jeg fikk resultatet. De beviser ikke at variablene er valgt riktig, at modellen passer til forskningsspørsmålet, eller at tolkningen min er korrekt.
+
+**Hvilke problemer gjenstår?** Selv om jeg deler filene mine, kan det være uklart hva en variabel betyr. Koden kan også slutte å virke dersom en pakke oppdateres eller fjernes. En person som forsøker å gjenta analysen, kan bruke en annen versjon av R og få en feilmelding eller et litt annet resultat. Derfor er det viktig å oppgi programvareversjoner og forklare sentrale deler av datasettet.
+
+Tilgjengelige data er ikke nødvendigvis data som andre enkelt kan bruke [@hardwicke2018]. Krav om deling må derfor følges opp i praksis [@stodden2018]. Det bør ikke være tilstrekkelig å laste opp noen filer dersom det mangler forklaringer på hvordan de henger sammen. En kort veiledning, kommentert kode og tydelige variabelnavn kan gjøre stor forskjell.
+
+Reproduserbarhet løser heller ikke problemet med at et resultat bare gjelder for et bestemt datamateriale. Hvis jeg finner en sammenheng i arbeidsledighetstallene for ett år, bør jeg undersøke om den også finnes i andre år eller kommuner. En slik test sier mer om hvor godt funnet holder enn å kjøre nøyaktig den samme analysen én gang til [@munafo2017]. Etter min vurdering bør reproduserbarhet derfor være et minstekrav, men ikke det eneste kravet. For å kunne stole på et forskningsfunn må vi også vurdere kvaliteten på dataene, metoden, analysevalgene og om resultatet kan bekreftes med nye data.
+
+```{=typst}
+#v(0.7em)
+```
 
 ## Konklusjon
 
@@ -51,10 +87,18 @@ Reproduserbarhet bør være et grunnkrav i forskning fordi den gjør det mulig �
 
 Samtidig er et resultat ikke automatisk pålitelig bare fordi analysen kan gjentas. Forskeren kan ha valgt en lite egnet metode, eller funnet kan være spesielt for dataene som ble brukt. For å stole mer på konklusjonen bør vi derfor også vurdere analysevalgene og undersøke om resultatet holder med nye data [@munafo2017].
 
+```{=typst}
+#pagebreak()
+```
+
 ## Referanser
 
 ::: {#refs}
 :::
+
+```{=typst}
+#pagebreak()
+```
 
 ## Appendiks A
 
