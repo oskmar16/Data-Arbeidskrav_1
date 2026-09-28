@@ -1,0 +1,44 @@
+---
+title: "Kommentarer"
+format: html
+lang: nb
+editor: source
+---
+
+- endret til `lang: nb`i YAML header, gir norsk bokmål som språk
+- endret fra:
+
+```{r}
+#| echo: false
+cat("bibliography:
+\t-\treproducibility.bib
+\t-\tmine_artikler.bib")
+```
+
+til `bibliography: [reproducibility.bib, mine_artikler.bib]` siden denne «gamle» måten å angi flere bib-filer på virker i både Source og Virtual mode. Den nye måten som du har brukt tror jeg er den mest korrekte. Så dette er kanskje en bug som vil bli rettet i fremtidige versjoner av RStudio/Quarto.
+
+- la også til `ag.bib` slik at jeg kan legge til referanser
+- Har redusert fremhevingen av problemstillingen til kursiv. Fet skrift i brødtekst blir av mange vurdert som litt vulgært.
+- Tidsskrift navn settes ofte i kursiv
+- Har derfor andret til *Cognition*
+- Tok bort:
+
+```{r}
+#| echo: false
+cat("```{=typst}
+#v(0.7em)
+```")
+```
+
+Jeg anbefaler å stole på de typografiske valgene som er gjort i programvaren. Konsentrer deg heller om innhold og struktur. Hele poenget med strukturerte dokumenter.
+
+- Ditto for sub-section overskriftene under *Diskusjon av forskningsspørsmålet*
+- Vil foreslå å bytte fra *Diskusjon av forskningsspørsmålet* til en mer direkte tittel f.eks *Reproduserbart eller replikerbart?*
+
+## Generelle kommentarer
+
+- Sett stor pris på at din stemme kommer igjeenom og ikke bare anonymt KI-prat.
+- Flott paper
+- Fornuftig bruk av KI
+- Du kunne hatt mer informative «commit messages»
+- Godkjent
